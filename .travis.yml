@@ -3,10 +3,6 @@ language: node_js
 compiler: gcc
 sudo: false
 
-env:
-  global:
-    - SKIP_SASS_BINARY_DOWNLOAD_FOR_CI=true
-
 jobs:
   include:
     - stage: test
@@ -17,54 +13,6 @@ jobs:
     - stage: platform-test
       node_js: "node"
       os: osx
-    - stage: platform-test
-      node_js: "11"
-      os: linux
-    - stage: platform-test
-      node_js: "11"
-      os: osx
-    - stage: platform-test
-      node_js: "10"
-      os: linux
-    - stage: platform-test
-      node_js: "10"
-      os: osx
-    - stage: platform-test
-      node_js: "9"
-      os: linux
-    - stage: platform-test
-      node_js: "9"
-      os: osx
-    - stage: platform-test
-      node_js: "8"
-      os: linux
-    - stage: platform-test
-      node_js: "8"
-      os: osx
-    - stage: platform-test
-      node_js: "7"
-      os: linux
-    - stage: platform-test
-      node_js: "7"
-      os: osx
-    - stage: platform-test
-      node_js: "6"
-      os: linux
-    - stage: platform-test
-      node_js: "6"
-      os: osx
-    - stage: platform-test
-      node_js: "4"
-      os: linux
-    - stage: platform-test
-      node_js: "4"
-      os: osx
-    - stage: platform-test
-      node_js: "0.12"
-      os: linux
-    - stage: platform-test
-      node_js: "0.10"
-      os: linux
 
 addons:
   apt:
