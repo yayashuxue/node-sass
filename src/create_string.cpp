@@ -14,7 +14,7 @@ char* create_string(Nan::MaybeLocal<v8::Value> maybevalue) {
     return 0;
   }
 
-  Nan::Utf8String string(value);
+  v8::String::Utf8Value string(v8::Isolate::GetCurrent(), value);
   char *str = (char *)malloc(string.length() + 1);
   strcpy(str, *string);
   return str;
